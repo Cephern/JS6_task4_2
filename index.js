@@ -1,6 +1,4 @@
 const [{ Server: h1 }, x] = [require("http"), require("express")];
-const request = require("request");
-const url = require("url");
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const passport = require("passport");
