@@ -1,4 +1,6 @@
 const [{ Server: h1 }, x] = [require("http"), require("express")];
+const request = require("request");
+const url = require("url");
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const passport = require("passport");
@@ -68,7 +70,7 @@ app
   )
 
   .get("/profile", ensureAuth, (r) =>
-    r.res.send(`<a href="/logout">Хотите выйти, ${r.user.login}?</a>`)
+    r.res.send(`<a href="/logout">${r.user.login}</a>`)
   )
 
   .get("/logout", (r, res) => {

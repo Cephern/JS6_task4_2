@@ -6,5 +6,7 @@ async function getConn() {
     useUnifiedTopology: true,
   });
 }
-getConn().catch((e) => console.error("Соединиться	с	БД	не	удалось.	На	этом	всё."));
+getConn().catch((e) =>
+  console.error("Соединиться с БД не удалось. На этом всё.")
+);
 module.exports = m;
